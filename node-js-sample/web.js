@@ -3,7 +3,11 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello World mohammad!');
+fs = require('fs');
+fs.readFile('bitstarter / node-js-sample / index.html', 'utf8', function(err,data){
+  if (err) { return console.log(err);}
+  response.send(data);
+ }
 });
 
 var port = process.env.PORT || 5000;
