@@ -4,7 +4,7 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
 fs = require('fs');
-fs.readFile('bitstarter/node-js-sample/index.html', 'utf8', function(err,data){
+fs.readFile('/bitstarter/node-js-sample/index.html', 'utf8', function(err,data){
   if (err) { return console.log(err);}
   response.send(data);
  });
